@@ -16,5 +16,26 @@ namespace OA_Titkos_Projekt
         {
             InitializeComponent();
         }
+
+        private void toolNew_Click(object sender, EventArgs e)
+        {
+            new FormCreate().ShowDialog();
+            dataGridViewCargo.DataSource = CargoRepository.FindAll();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Made by: Olajkár Ákos");
+        }
     }
 }
