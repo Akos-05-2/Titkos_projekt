@@ -21,5 +21,19 @@ namespace OA_Titkos_Projekt
         {
 
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Cargo cargo = new Cargo()
+            {
+                Date = DateTime.Parse(textBoxDate.Text),
+                Source = textBoxSource.Text,
+                Destination = textBoxDestination.Text,
+                Good = comboBoxGoods.Text,
+                Quantity = int.Parse(textBoxQuantity.Text)
+            };
+            CargoRepository.Save(cargo);
+            MessageBox.Show("New object added");
+        }
     }
 }

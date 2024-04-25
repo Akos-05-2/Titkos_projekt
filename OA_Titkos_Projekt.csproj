@@ -60,6 +60,7 @@
     <Compile Include="FormCreate.Designer.cs">
       <DependentUpon>FormCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="ICargo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

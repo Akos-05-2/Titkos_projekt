@@ -30,7 +30,12 @@ namespace OA_Titkos_Projekt
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CargoRepository.Path = openFileDialog1.FileName;
+                dataGridViewCargo.DataSource = CargoRepository.FindAll();
+                Text = $"Cargo - {openFileDialog1.FileName}";
+            }
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

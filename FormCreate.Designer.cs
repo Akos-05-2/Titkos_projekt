@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.textBoxSource = new System.Windows.Forms.TextBox();
+            this.textBoxDestination = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.comboBoxGoods = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -81,43 +81,48 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 127);
+            this.label5.Location = new System.Drawing.Point(28, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quantity:";
             // 
-            // textBox1
+            // textBoxDate
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 5;
+            this.textBoxDate.Location = new System.Drawing.Point(92, 18);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(121, 22);
+            this.textBoxDate.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxSource
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 6;
+            this.textBoxSource.Location = new System.Drawing.Point(92, 46);
+            this.textBoxSource.Name = "textBoxSource";
+            this.textBoxSource.Size = new System.Drawing.Size(121, 22);
+            this.textBoxSource.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxDestination
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 7;
+            this.textBoxDestination.Location = new System.Drawing.Point(92, 71);
+            this.textBoxDestination.Name = "textBoxDestination";
+            this.textBoxDestination.Size = new System.Drawing.Size(121, 22);
+            this.textBoxDestination.TabIndex = 7;
             // 
-            // textBox5
+            // textBoxQuantity
             // 
-            this.textBox5.Location = new System.Drawing.Point(92, 127);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 9;
+            this.textBoxQuantity.Location = new System.Drawing.Point(92, 127);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(121, 22);
+            this.textBoxQuantity.TabIndex = 9;
             // 
             // comboBoxGoods
             // 
             this.comboBoxGoods.FormattingEnabled = true;
+            this.comboBoxGoods.Items.AddRange(new object[] {
+            "Műszaki cikkek",
+            "Energiahordozók",
+            "Nyersanyagok",
+            "Élelmiszer"});
             this.comboBoxGoods.Location = new System.Drawing.Point(92, 96);
             this.comboBoxGoods.Name = "comboBoxGoods";
             this.comboBoxGoods.Size = new System.Drawing.Size(121, 24);
@@ -131,6 +136,7 @@
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // FormCreate
             // 
@@ -139,10 +145,10 @@
             this.ClientSize = new System.Drawing.Size(364, 292);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.comboBoxGoods);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxQuantity);
+            this.Controls.Add(this.textBoxDestination);
+            this.Controls.Add(this.textBoxSource);
+            this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -162,10 +168,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.TextBox textBoxSource;
+        private System.Windows.Forms.TextBox textBoxDestination;
+        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.ComboBox comboBoxGoods;
         private System.Windows.Forms.Button buttonAdd;
     }

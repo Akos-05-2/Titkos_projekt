@@ -8,7 +8,7 @@ namespace OA_Titkos_Projekt
 {
     internal class Cargo
     {
-        private static int nextId = -1;
+        public static int nextId = 0;
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public string Source { get; set; }
